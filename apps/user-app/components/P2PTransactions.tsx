@@ -33,7 +33,7 @@ export const P2PTransactions = ({
                     </div>
                 </div>
                 <div className="flex flex-col justify-center">
-                    {t.to == undefined ? "+" : "-"}Rs {t.amount / 100}
+                    {t.to == undefined ? "+" : "-"}$ {t.amount / 100}
                 </div>
 
             </div>)})}
