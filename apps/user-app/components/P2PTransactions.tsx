@@ -1,8 +1,5 @@
 import { Card } from "@repo/ui/card"
 
-
-
-
 export const P2PTransactions = ({
     transactions
 }: {
