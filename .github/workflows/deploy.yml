@@ -20,7 +20,7 @@ jobs:
         echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> apps/user-app/.env
 
         touch packages/db/.env
-        echo "DATABSE_URL=${{ secrets.DATABASE_URL }}" >> packages/db/.env
+        echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> packages/db/.env
 
     - name: Log in to Docker Hub
       uses: docker/login-action@v1
