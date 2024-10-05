@@ -15,9 +15,9 @@ jobs:
 
     - name : Generate .env file
       run: |
-        touch .env
-        echo "NEXTAUTH_URL=${{ secrets.NEXTAUTH_URL }}" >> .env
-        echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> .env
+        touch apps/user-app/.env
+        echo "NEXTAUTH_URL=${{ secrets.NEXTAUTH_URL }}" >> apps/user-app/.env
+        echo "JWT_SECRET=${{ secrets.JWT_SECRET }}" >> apps/user-app/.env
 
         touch packages/db/.env
         echo "DATABSE_URL=${{ secrets.DATABASE_URL }}" >> packages/db/.env
