@@ -49,4 +49,8 @@ jobs:
           sudo docker pull sitanshu02/payttm:latest
           sudo docker stop paytm || true
           sudo docker rm paytm || true
-          sudo docker run -d --name paytm -p 3005:3000 sitanshu02/payttm:latest
+           sudo docker run -d --name paytm -p 3005:3000 \
+            -e NEXTAUTH_URL="${{ secrets.NEXTAUTH_URL }}" \
+            -e JWT_SECRET="${{ secrets.JWT_SECRET }}" \
+            -e DATABASE_URL="${{ secrets.DATABASE_URL }}" \
+            sitanshu02/payttm:latest
