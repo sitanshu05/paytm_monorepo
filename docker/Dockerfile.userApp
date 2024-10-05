@@ -10,7 +10,6 @@ COPY packages ./packages
 # Install dependencies
 RUN npm install
 # Can you add a script to the global package.json that does this?
-ENV DATABASE_URL=${DATABASE_URL}
 
 RUN cd packages/db && \
     npx prisma migrate deploy && \
